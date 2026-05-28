@@ -1,0 +1,9 @@
+[project]
+name = "benchmarl"
+version = "1.5.1"
+description = "BenchMARL for research"
+dependencies = []
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

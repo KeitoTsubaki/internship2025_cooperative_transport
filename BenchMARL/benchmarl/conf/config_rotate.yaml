@@ -1,0 +1,26 @@
+defaults:
+  # these configs are required to be located in the benchmarl/conf folder
+  
+  # experiment name will be registered as a id in wandb
+  # C:\TUT\Classes\B4\internship\cooperativeTransport\BenchMARL\benchmarl\experiment\logger.py  
+  - experiment: base_experiment_rotate
+
+  # Options: iddpg, ippo, iql, isac, maddpg, mappo, masac, qmix, vdn
+  # it is ok to select multiple algorithms (e.g. algorithm: mappo, maddpg)
+  - algorithm: mappo
+  
+  # Task name will be registered as a group in wandb
+  # C:\TUT\Classes\B4\internship\cooperativeTransport\BenchMARL\benchmarl\experiment\logger.py
+  - task: my_vmas_rotate/my_transport_rotate
+  # - task: vmas/transport
+
+  - model: actor_mlp #layers/mlp
+  - model@critic_model: critic_mlp #layers/mlp
+
+  - _self_
+
+# We should try various seeds to evaluate the training properly
+# e.g. try 5 seeds and average them
+seed: 0
+# seed: 1
+# seed: 2

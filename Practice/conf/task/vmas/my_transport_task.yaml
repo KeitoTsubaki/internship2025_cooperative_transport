@@ -1,0 +1,5 @@
+task_class: benchmarl.environments.vmas.common.VmasTask
+
+name: my_transport_scenario
+
+max_n_agents: 4
